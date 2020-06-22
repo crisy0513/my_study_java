@@ -8,5 +8,6 @@ package com.example.m2;
 public class TestController {
     public static void main(String[] args) {
         System.out.println("wcx");
+        System.out.println("zs");
     }
 }
