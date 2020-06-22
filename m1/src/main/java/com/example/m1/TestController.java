@@ -1,17 +1,18 @@
 package com.example.m1;
 
-import com.example.mapi.MDateUtil;
+import org.springframework.web.bind.annotation.Mapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 /**
  * @author wangchenxin
- * @date 2020/6/19  10:57
+ * @date 2020/6/22  10:15
  * @desc
  */
-
-
+@RestController
 public class TestController {
-    public static void main(String[] args) {
-        String s = MDateUtil.loadStrDate("",1);
-        System.out.println(s);
+    @RequestMapping("/index")
+    public String test(){
+        return "success!";
     }
 }
