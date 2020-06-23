@@ -13,6 +13,12 @@ import org.springframework.web.bind.annotation.RestController;
 public class TestController {
     @RequestMapping("/hello")
     public String test(@RequestParam String name){
+        System.out.println("------------"+name+"-----------------");
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         return "Hello,"+name+",this is first message!";
     }
 }
