@@ -1,4 +1,4 @@
-package com.example.config_client;
+package com.example.config_client2;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
@@ -7,19 +7,17 @@ import org.springframework.web.bind.annotation.RestController;
 
 /**
  * @author wangchenxin
- * @date 2020/6/22  14:48
+ * @date 2020/6/23  8:28
  * @desc
  */
-
 @RestController
 @RefreshScope
 public class TestController {
-
     @Value("${neo.hello}")
     private String hello;
 
     @RequestMapping("/hello")
     public String hello(){
-        return "client1"+this.hello;
+        return "client2"+this.hello;
     }
 }
