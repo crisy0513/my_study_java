@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:sec="http://www.thymeleaf-extras-springsecurity5">
+<head>
+    <title>401</title>
+    <meta charset="utf-8">
+</head>
+<body>
+<h1>401</h1>
+<h2>权限不够</h2>
+<div sec:authorize="isAuthenticated()">
+    <p>用户<span sec:authentication="name"></span></p>
+    <p>角色<span sec:authentication="principal.authorities"></span></p>
+</div>
+<div sec:authorize="isAnonymous()">
+    <p>未登录</p>
+</div>
+<p>拒绝访问</p>
+</body>
+</html>
